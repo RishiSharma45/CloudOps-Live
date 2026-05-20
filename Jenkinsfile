@@ -3,15 +3,11 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/RishiSharma45/CloudOps-Live.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t cloudops-live .'
+                dir('app') {
+                    sh 'docker build -t cloudops-live .'
+                }
             }
         }
 
