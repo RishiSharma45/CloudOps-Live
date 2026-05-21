@@ -5,7 +5,7 @@ const app = express();
 const PORT = 3000;
 
 app.get('/', (req, res) => {
-    res.send('CloudOps Live CI/CD Active 🔥');
+    res.send('CloudOps Fully Automated 🚀');
 });
 
 app.get('/metrics', (req, res) => {
